@@ -1,0 +1,11 @@
+<h1>Login</h1>
+<%= form_tag sessions_letmein_path, method: :post, class: "navbar-form navbar-left search-form" do %>
+  <%= text_field_tag(
+      :name,
+      params[:name],
+      placeholder: "User name",
+      class: "form-control"
+  ) %>
+  <%= submit_tag "login" %>
+
+<% end %>
