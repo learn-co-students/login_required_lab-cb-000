@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  root 'sessions#new'
+  post '/sessions/create'
 
+  post '/sessions/destroy'
+
+  get '/secret', to: 'secrets#show', as: :secret
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
