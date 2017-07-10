@@ -21,14 +21,14 @@ RSpec.describe SessionsController do
 
   describe 'destroy' do
     it 'leaves session[:name] nil if it was not set' do
-      post :destroy
+      delete :destroy
       expect(@request.session[:name]).to be nil
     end
 
     it 'clears session[:name] if it was set' do
       post :create, name: 'Trinity'
       expect(@request.session[:name]).to_not be nil
-      post :destroy
+      delete :destroy
       expect(@request.session[:name]).to be nil
     end
   end
