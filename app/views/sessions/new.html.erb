@@ -1,0 +1,7 @@
+<h2>Log In</h2>
+
+<%= form_tag '/sessions/create' do %>
+  <%= label_tag :name, "name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag "Log In" %>
+<% end %>
