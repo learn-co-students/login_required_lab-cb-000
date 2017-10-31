@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get 'secrets' => 'secrets#show'
+  resources :sessions, only: [:new, :create]
+  get 'sessions/destroy' => 'sessions#destroy'
 end
