@@ -1,0 +1,5 @@
+<%=form_tag(login_path) do%>
+  <label for = 'name'>Name:</label>
+  <%=text_field_tag 'name', nil, placeholder: 'Sir Johnny Bartholemew'%>
+  <%=submit_tag 'Log In'%>
+<%end%>
