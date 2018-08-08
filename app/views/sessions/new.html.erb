@@ -1,0 +1,6 @@
+<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name %>
+  <br>
+  <%= submit_tag 'login'%>
+<% end %>
