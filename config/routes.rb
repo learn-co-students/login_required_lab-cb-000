@@ -53,4 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  get 'sessions/new', to: 'sessions#new'
+  post 'sessions', to: 'sessions#create'
+  delete 'sessions', to: 'sessions#destroy'
+  get 'secrets', to: 'secrets#show'
+  root 'sessions#new'
 end
