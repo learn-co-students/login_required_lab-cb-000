@@ -1,0 +1,6 @@
+<h2> Welcome to the members only zone </h2>
+<form action='/secret' method='post'>
+  see the secret with your own eyes
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type='submit' >
+</form>
