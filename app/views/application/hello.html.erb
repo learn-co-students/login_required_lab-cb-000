@@ -1,0 +1,10 @@
+<% if current_user then %>
+  <h1>Hi, <%= current_user %></h1>
+  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+    <input type=submit value='logout'>
+  <% end %>
+  <br>
+  <%= link_to "Secrets Page", secrets_path %>
+<%else%>
+  <h1>Hello there! Please <a href="/login">log-in</a></h1>
+<%end%>
